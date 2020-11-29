@@ -20,7 +20,8 @@ bot interactions require server administrator permissions for all actions.
 - Enable `SERVER MEMBERS INTENT` to allow the bot to read users on a server
 - Click the `Oauth` Tab
 - Check the `bot` Scope
-- Copy the URL from the scopes window
+- underneath, in `BOT PERMISSIONS` check `manage roles`
+- Now copy the URL from the scopes window
 - Paste the URL into a web browser and hit Enter
 - Select the Server you wish to add the bot to
 - Success! the bot is created and added to the server
