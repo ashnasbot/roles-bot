@@ -1,9 +1,10 @@
 roles-bot
 =========
 
-A simple discord bot that allows you to create rules.
-When a user has all the required roles in a rule, an extra role can be assigned.
-This allows combining integration perks into an even bigger bonus.
+A simple discord bot that allows you to create rules.  
+When a user has all the required roles in a rule, an extra role can be assigned.  
+This allows combining integration perks into an even bigger bonus.  
+bot interactions require server administrator permissions for all actions.
 
 [See the Demo](demo.mp4)
 
