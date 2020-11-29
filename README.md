@@ -8,19 +8,35 @@ This allows combining integration perks into an even bigger bonus.
 [See the Demo](demo.mp4)
 
 # Setup
-Create an application on the [Discord developer portal](https://discord.com/developers/applications).
-roles-bot needs `bot` oauth scope, adn the `Server Members` privlidged intent in order to view and assign user roles.
-Create the oauth token and follow it to add the bot to a server.
+## Creating application
+- Go to the [Discord developer portal](https://discord.com/developers/applications).
+- Login
+- Click `New Application`
+- Name the Application
+- Click the `Add Bot` button
+- Name your bot in the dialog
+- Click `Reveal token` and make a note while we're here
+- Enable `SERVER MEMBERS INTENT` to allow the bot to read users on a server
+- Click the `Oauth` Tab
+- Check the `bot` Scope
+- Copy the URL from the scopes window
+- Paste the URL into a web browser and hit Enter
+- Select the Server you wish to add the bot to
+- Success! the bot is created and added to the server
+- Now this application can interact with your server
 
-# Privacy
-This bot accesses Member information such as usernames and assigned roles, this is privlidged information and should be handled with care.
-This information is used only to assign bots but will be stored in the logs.
-Only the Rules and thus role-names are stored in this applications database.
-Be careful who you give access to the bot logs.
+## roles-bot client
+This code forms the `client` of the bot, that actually drives the interactions in your server.
+Download the latest [release](https://github.com/ashnasbot/roles-bot/releases) or clone the repository.
 
-# Config
-With a created bot, add the bot `TOKEN` to the `.env` file as `BOT_TOKEN`
-run the python file to start.
+## Config
+With a created bot, create a `.env` file next to the application add the bot `TOKEN` to the `.env` file as `BOT_TOKEN`.
+See [the example .env file](.env).
+run the application to start.
+```
+.\roles-bot.exe
+```
+or
 ```bash
 python3 __main__.py
 ```
@@ -34,6 +50,12 @@ All bot commands start with $rb, implemented commands are as follows.
   $rbdel <id>  Remove a rule
   $rblist  List the current rules in this guild.
 ```
+
+# Privacy
+This bot accesses Member information such as usernames and assigned roles, this is privlidged information and should be handled with care.
+This information is used only to assign bots but will be stored in the logs.
+Only the Rules and thus role-names are stored in this applications database.
+Be careful who you give access to the bot logs.
 
 # Issues/Notes
 - Reconnection logic hasn't been robustly tested
@@ -58,7 +80,7 @@ All bot commands start with $rb, implemented commands are as follows.
 - [x] readme
 - [x] gitlab
 - [x] bot/moderator permission for commands
+- [x] bundled app (exe)
+- [x] privacy statement
 - [ ] Configurable log level
 - [ ] Log to file
-- [ ] bundled app (exe)
-- [ ] privacy statement
