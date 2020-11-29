@@ -44,13 +44,17 @@ python3 __main__.py
 
 # Commands/Rules
 Once connected to a sever, a member with the `Administrator` Role can use the following commands to configure rules.
-All bot commands start with $rb, implemented commands are as follows.
+All bot commands start with $rb, implemented commands are as follows:
 ```
   $rbhelp  Shows help message
   $rbadd @role1 @role2 @role3  If user has role1 and role2, assign the third roles (can be used with multiple roles)
   $rbdel <id>  Remove a rule
   $rblist  List the current rules in this guild.
 ```
+use `$rbadd` to add roles to a guild - commands must be run in the server you wish to modify rules for
+The last argument to `$rbadd` is the role to assign, a user must have all other roles in order to be granted the final role.
+Multiple rules can share the same assigned role, if a user meets any of the requirements they will gain the role.
+(hint: create a new channel to interact with the bot in private)
 
 # Privacy
 This bot accesses Member information such as usernames and assigned roles, this is privlidged information and should be handled with care.
